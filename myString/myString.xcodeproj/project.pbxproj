@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		69817EBB2B988BC200E9D350 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69817EBA2B988BC200E9D350 /* main.cpp */; };
+		69817EC32B988D6200E9D350 /* myString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69817EC12B988D6200E9D350 /* myString.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +24,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		69817EB72B988BC200E9D350 /* String */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = String; sourceTree = BUILT_PRODUCTS_DIR; };
+		69817EB72B988BC200E9D350 /* myString */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = myString; sourceTree = BUILT_PRODUCTS_DIR; };
 		69817EBA2B988BC200E9D350 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		69817EC12B988D6200E9D350 /* myString.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = myString.cpp; sourceTree = "<group>"; };
+		69817EC22B988D6200E9D350 /* myString.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = myString.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +44,7 @@
 		69817EAE2B988BC200E9D350 = {
 			isa = PBXGroup;
 			children = (
-				69817EB92B988BC200E9D350 /* String */,
+				69817EB92B988BC200E9D350 /* myString */,
 				69817EB82B988BC200E9D350 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,25 +52,27 @@
 		69817EB82B988BC200E9D350 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				69817EB72B988BC200E9D350 /* String */,
+				69817EB72B988BC200E9D350 /* myString */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		69817EB92B988BC200E9D350 /* String */ = {
+		69817EB92B988BC200E9D350 /* myString */ = {
 			isa = PBXGroup;
 			children = (
 				69817EBA2B988BC200E9D350 /* main.cpp */,
+				69817EC12B988D6200E9D350 /* myString.cpp */,
+				69817EC22B988D6200E9D350 /* myString.hpp */,
 			);
-			path = String;
+			path = myString;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		69817EB62B988BC200E9D350 /* String */ = {
+		69817EB62B988BC200E9D350 /* myString */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 69817EBE2B988BC200E9D350 /* Build configuration list for PBXNativeTarget "String" */;
+			buildConfigurationList = 69817EBE2B988BC200E9D350 /* Build configuration list for PBXNativeTarget "myString" */;
 			buildPhases = (
 				69817EB32B988BC200E9D350 /* Sources */,
 				69817EB42B988BC200E9D350 /* Frameworks */,
@@ -77,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = String;
+			name = myString;
 			productName = String;
-			productReference = 69817EB72B988BC200E9D350 /* String */;
+			productReference = 69817EB72B988BC200E9D350 /* myString */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -96,7 +101,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 69817EB22B988BC200E9D350 /* Build configuration list for PBXProject "String" */;
+			buildConfigurationList = 69817EB22B988BC200E9D350 /* Build configuration list for PBXProject "myString" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -109,7 +114,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				69817EB62B988BC200E9D350 /* String */,
+				69817EB62B988BC200E9D350 /* myString */,
 			);
 		};
 /* End PBXProject section */
@@ -119,6 +124,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69817EC32B988D6200E9D350 /* myString.cpp in Sources */,
 				69817EBB2B988BC200E9D350 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,7 +270,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		69817EB22B988BC200E9D350 /* Build configuration list for PBXProject "String" */ = {
+		69817EB22B988BC200E9D350 /* Build configuration list for PBXProject "myString" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				69817EBC2B988BC200E9D350 /* Debug */,
@@ -273,7 +279,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		69817EBE2B988BC200E9D350 /* Build configuration list for PBXNativeTarget "String" */ = {
+		69817EBE2B988BC200E9D350 /* Build configuration list for PBXNativeTarget "myString" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				69817EBF2B988BC200E9D350 /* Debug */,
