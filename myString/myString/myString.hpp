@@ -75,21 +75,14 @@ public:
         cout << "Added the appendLine word to the buffer\n";
     }
 
-    void Replace(char replace, char replacer)
-    {
-        int m = 0;
-        while (buffer[m] != '\0')
-        {
-            if (buffer[m] == replace)
-            {
-                buffer[m] = replacer;
-            }
-            m++;
-            if (m >= length)
-            {
-                buffer[m] = '\0';
-            }
+    void replace(char replace, char replacer)
+    {for (int i = 0; i < length; ++i) {
+        if (buffer[i] == replace) {
+            buffer[i] = replacer;
         }
+    }
+       
+        
     }
 
     void print()
