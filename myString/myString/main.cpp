@@ -1,14 +1,13 @@
-//
-//  main.cpp
-//  String
-//
-//  Created by Unnie Jansson on 2024-03-06.
-//
 
+#include "myString.hpp"
 #include <iostream>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+int main() {
+    myString helloWorld("Hello", 100);
+    helloWorld.append(", World\n");
+    helloWorld.append("Alli");
+    helloWorld.append("hopa!");
+
+    helloWorld.print();
 }
+
