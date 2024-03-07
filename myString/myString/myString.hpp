@@ -7,11 +7,11 @@ using namespace std;
 class myString
 {
     int length = 0;
-    int maxSize;
+    const int maxSize;
     char* buffer;
 
 public:
-    myString(int maxSize) :maxSize(maxSize)
+    myString(const int maxSize) :maxSize(maxSize)
     {
         buffer = new char[maxSize];
         buffer[length] = '\0';
@@ -19,7 +19,7 @@ public:
     }
    
 
-    myString(const char* text, int maxSize) : maxSize(maxSize)
+    myString(const char* text, const int maxSize) : maxSize(maxSize)
     {
         cout << "Is it alive?!\n";
         buffer = new char[maxSize];
