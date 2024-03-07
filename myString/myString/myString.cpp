@@ -8,62 +8,47 @@ using namespace std;
 myString::myString(const int maxSize): maxSize(maxSize), buffer(new char[maxSize])
 {
     
-    
+    buffer[0] = '\0';
 }
 
-
-int main() {
-    myString helloWorld("Hello", 100);
-    helloWorld.append(", World\n");
-    helloWorld.append("Alli");
-    helloWorld.append("hopa!");
-
-    helloWorld.print();
-}
-
-
-myString(const int maxSize) :maxSize(maxSize)
+myString::myString(const int text): maxSize(maxSize), buffer(new char[maxSize])
 {
-buffer = new char[maxSize];
-buffer[length] = '\0';
-
+    while (text[length] != '\0' && length < maxSize -1)
+    {
+    buffer[length] = text[length];
+    length++;
+    }
+    buffer [length];
 }
 
 
-myString(const char* text, const int maxSize) : maxSize(maxSize)
+
+myString::~myString() 
+
 {
-cout << "Is it alive?!\n";
-buffer = new char[maxSize];
-while (text[length] != '\0' && length < maxSize)
-{
-buffer[length] = text[length];
-length++;
-}
-}
-
-~myString() {
-delete[] buffer;
-cout << "\nBye Bye\n";
+    delete[] buffer;
 }
 
 void append(const char* text1)
 {
 int textLength = 0;
-while (text1[textLength] != '\0')
-{
-textLength++;
-}
-if (length + textLength < maxSize)
-{
-for (int i = 0; i < textLength; i++)
-{
-buffer[length] = text1[i];
-length++;
-}
+    
+    while (text1[textLength] != '\0')
+    {
+        textLength++;
+    }
+    if (length + textLength < maxSize)
+    {
+        for (int i = 0; i < textLength; i++)
+        {
+            buffer[length] = text1[i];
+            length++;
+        }
+        
 buffer[length] = '\0';
-}
-cout << "Added the append word to the buffer\n";
-}
+    }
+    cout << "Added the append word to the buffer\n";
+    }
 
 void appendLine(const char* text2)
 {
@@ -133,6 +118,7 @@ int indexOf(const myString& other) const
 {
 int i = 0;
 int j = 0;
+    
 while (buffer[i] != '\0' && other.buffer[j] != '\0')
 {
 if (buffer[i] == other.buffer[j])
@@ -145,5 +131,14 @@ i++;
 return -1;
 }
 
-};
+}
 
+
+int main() {
+    myString helloWorld("Hello", 100);
+    helloWorld.append(", World\n");
+    helloWorld.append("Alli");
+    helloWorld.append("hopa!");
+
+    helloWorld.print();
+};
