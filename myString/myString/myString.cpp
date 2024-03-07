@@ -7,16 +7,17 @@ using namespace std;
 
 myString::myString(const int maxSize): maxSize(maxSize), buffer(new char[maxSize])
 {
-    
     buffer[0] = '\0';
 }
 
-myString::myString(const int text): maxSize(maxSize), buffer(new char[maxSize])
+myString:: myString(const int text): maxSize(maxSize), buffer(new char[maxSize])
 {
+    length = 0;
     while (text[length] != '\0' && length < maxSize -1)
     {
     buffer[length] = text[length];
     length++;
+        
     }
     buffer [length];
 }
