@@ -22,21 +22,21 @@ myString::myString(const int text): maxSize(maxSize), buffer(new char[maxSize])
 }
 
 
+    myString::~myString()
 
-myString::~myString() 
-
-{
+    {
     delete[] buffer;
-}
+    }
 
-void append(const char* text1)
-{
-int textLength = 0;
+    void myString:: append(const char* text1)
+    {
+        int textLength = 0;
     
     while (text1[textLength] != '\0')
     {
         textLength++;
     }
+        
     if (length + textLength < maxSize)
     {
         for (int i = 0; i < textLength; i++)
@@ -45,93 +45,99 @@ int textLength = 0;
             length++;
         }
         
-buffer[length] = '\0';
+    buffer[length] = '\0';
+    
+        }
+        cout << "Added the append word to the buffer\n";
+        }
+
+void myString:: appendLine(const char* text2)
+        {
+            int textLength = 0;
+            while (text2[textLength] != '\0')
+        {
+        textLength++;
     }
-    cout << "Added the append word to the buffer\n";
+        
+        
+        if (length + textLength < maxSize)
+        {
+            for (int i = 0; i < textLength; i++)
+        {
+            
+            buffer[length] = text2[i];
+            length++;
+        }
+            
+            buffer[length] = '\n';
+            length++;
+            buffer[length] = '\0';
+        }
+            cout << "Added the appendLine word to the buffer\n";
+        }
+
+void myString:: Replace(char replace, char replacer)
+    {
+    int m = 0;
+    while (buffer[m] != '\0')
+    {
+        if (buffer[m] == replace)
+        {
+    buffer[m] = replacer;
     }
-
-void appendLine(const char* text2)
-{
-int textLength = 0;
-while (text2[textLength] != '\0')
-{
-textLength++;
-}
-if (length + textLength < maxSize)
-{
-for (int i = 0; i < textLength; i++)
-{
-buffer[length] = text2[i];
-length++;
-}
-buffer[length] = '\n';
-length++;
-buffer[length] = '\0';
-}
-cout << "Added the appendLine word to the buffer\n";
+        m++;
+        
+        if (m >= length)
+        {
+            buffer[m] = '\0';
+        }
+    }
 }
 
-void Replace(char replace, char replacer)
+void myString:: print()
 {
-int m = 0;
-while (buffer[m] != '\0')
-{
-if (buffer[m] == replace)
-{
-buffer[m] = replacer;
-}
-m++;
-if (m >= length)
-{
-buffer[m] = '\0';
-}
-}
-}
-
-void print()
-{
-cout << "Printing stuff\n";
-cout << buffer;
+    cout << "Printing stuff\n";
+    cout << buffer;
 }
 
 char* getString()
 {
-return buffer;
+    return buffer;
 }
 
 
-bool operator== (const myString& other) const
+bool myString:: operator== (const myString& other) const
 {
-int i = 0;
-while (buffer[i] != '\0' && other.buffer[i] != '\0')
-{
-if (buffer[i] != other.buffer[i])
-{
-return false;
+    int i = 0;
+    while (buffer[i] != '\0' && other.buffer[i] != '\0')
+    {
+        if (buffer[i] != other.buffer[i])
+        {
+            return false;
+        }
+        i++;
 }
-i++;
-}
-return buffer[i] == other.buffer[i];
+    return buffer[i] == other.buffer[i];
 }
 
-int indexOf(const myString& other) const
+int myString:: indexOf(const myString& other) const
 {
-int i = 0;
-int j = 0;
+    int i = 0;
+    int j = 0;
     
-while (buffer[i] != '\0' && other.buffer[j] != '\0')
+    while (buffer[i] != '\0' && other.buffer[j] != '\0')
 {
-if (buffer[i] == other.buffer[j])
+    if (buffer[i] == other.buffer[j])
 {
-j++;
-return i;
+    j++;
+    return i;
 }
-i++;
+    i++;
 }
-return -1;
+    return -1;
 }
 
-}
+
 
 
 int main() {
