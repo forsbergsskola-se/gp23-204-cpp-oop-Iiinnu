@@ -22,7 +22,6 @@ myString:: myString(const int text): maxSize(maxSize), buffer(new char[maxSize])
     buffer [length];
 }
 
-
     myString::~myString()
 
     {
