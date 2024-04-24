@@ -11,55 +11,33 @@
 
 
 
-    void myString:: append(const char* text1)
+    void myString:: append(const char* text)
     {
         int textLength = std::strlen(text);
+        
+        
+        if (length + textLength< maxSize) {
+            std::strncpy(buffer + length,text, textLength);
+            length += textLength;
+            buffer [length] = '\0';
+        }
     
-    while (text1[textLength] != '\0')
-    {
-        textLength++;
+   
+void myString:: appendLine(const char* text)
+        {
+    append(text);
+    if (length +1 < maxSize) {
+        buffer [length++]='\n';
+        buffer [length] = '\0';
+        
     }
+    else{
+        cout << "Not enough space to append newline\n";
+   
         
-    if (length + textLength < maxSize)
-    {
-        for (int i = 0; i < textLength; i++)
-        {
-            buffer[length] = text1[i];
-            length++;
-        }
-        
-    buffer[length] = '\0';
-    
-        }
-        cout << "Added the append word to the buffer\n";
-        }
-
-void myString:: appendLine(const char* text2)
-        {
-            int textLength = 0;
-            while (text2[textLength] != '\0')
-        {
-        textLength++;
-    }
-        
-        
-        if (length + textLength < maxSize)
-        {
-            for (int i = 0; i < textLength; i++)
-        {
-            
-            buffer[length] = text2[i];
-            length++;
-        }
-            
-            buffer[length] = '\n';
-            length++;
-            buffer[length] = '\0';
-        }
-            cout << "Added the appendLine word to the buffer\n";
-        }
 
 void myString:: Replace(char replace, char replacer)
+        
     {
     int m = 0;
     while (buffer[m] != '\0')
@@ -77,56 +55,38 @@ void myString:: Replace(char replace, char replacer)
     }
 }
 
-void myString:: print()
+void myString:: print() const
 {
-    cout << "Printing stuff\n";
-    cout << buffer;
+    cout << buffer<< end1;
 }
 
-char* getString()
-{
-    return buffer;
-}
+char* myString::getString() const {
+return buffer;:}
 
 
-bool myString:: operator== (const myString& other) const
-{
-    int i = 0;
-    while (buffer[i] != '\0' && other.buffer[i] != '\0')
-    {
-        if (buffer[i] != other.buffer[i])
-        {
-            return false;
-        }
-        i++;
-}
-    return buffer[i] == other.buffer[i];
-}
-
-int myString:: indexOf(const myString& other) const
-{
-    int i = 0;
-    int j = 0;
-    
-    while (buffer[i] != '\0' && other.buffer[j] != '\0')
-{
-    if (buffer[i] == other.buffer[j])
-{
-    j++;
-    return i;
-}
-    i++;
-}
-    return -1;
-}
-
-    int main() {
-        myString helloWorld("Hello", 100);
-        helloWorld.append(", World\n");
-        helloWorld.append("Alli");
-        helloWorld.append("hopa!");
+bool myString::operator==(const myString& other) const 
         
-        helloWorld.print();
-    
+{
+return std::strcmp(buffer, other.buffer) == 0;
+}
 
-};
+    }
+
+    int myString::indexOf(const myString& other) const {
+        if (!*other.buffer) return -1; // other is empty
+
+        char* pos = strstr(buffer, other.buffer);
+        return pos ? pos - buffer : -1;
+    }
+
+            int main() {
+                myString helloWorld("Hello", 100);
+                helloWorld.append(", World\n");
+                helloWorld.append("Alli");
+                helloWorld.append("hopa!");
+                
+                helloWorld.print();
+                
+                
+                
+            }};
