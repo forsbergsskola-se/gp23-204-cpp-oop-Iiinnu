@@ -1,26 +1,7 @@
 #include "myString.hpp"
-#include "string.h"
 #include <iostream>
+#include "cstring"
 
-
-using namespace std;
-
-myString::myString(const int maxSize): maxSize(maxSize), buffer(new char[maxSize])
-{
-    buffer[0] = '\0';
-}
-
-myString:: myString(const int text): maxSize(maxSize), buffer(new char[maxSize])
-{
-    length = 0;
-    while (text[length] != '\0' && length < maxSize -1)
-    {
-    buffer[length] = text[length];
-    length++;
-        
-    }
-    buffer [length];
-}
 
     myString::~myString()
 
@@ -28,9 +9,11 @@ myString:: myString(const int text): maxSize(maxSize), buffer(new char[maxSize])
     delete[] buffer;
     }
 
+
+
     void myString:: append(const char* text1)
     {
-        int textLength = 0;
+        int textLength = std::strlen(text);
     
     while (text1[textLength] != '\0')
     {
@@ -137,14 +120,13 @@ int myString:: indexOf(const myString& other) const
     return -1;
 }
 
+    int main() {
+        myString helloWorld("Hello", 100);
+        helloWorld.append(", World\n");
+        helloWorld.append("Alli");
+        helloWorld.append("hopa!");
+        
+        helloWorld.print();
+    
 
-
-
-int main() {
-    myString helloWorld("Hello", 100);
-    helloWorld.append(", World\n");
-    helloWorld.append("Alli");
-    helloWorld.append("hopa!");
-
-    helloWorld.print();
 };

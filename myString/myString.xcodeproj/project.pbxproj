@@ -7,11 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		694482BC2BD91EC400FD5041 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 694482BB2BD91EC400FD5041 /* main.cpp */; };
 		69817EBB2B988BC200E9D350 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69817EBA2B988BC200E9D350 /* main.cpp */; };
 		69817EC32B988D6200E9D350 /* myString.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69817EC12B988D6200E9D350 /* myString.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		694482B72BD91EC400FD5041 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		69817EB52B988BC200E9D350 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -24,6 +34,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		694482B92BD91EC400FD5041 /* MainTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MainTest; sourceTree = BUILT_PRODUCTS_DIR; };
+		694482BB2BD91EC400FD5041 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		69817EB72B988BC200E9D350 /* myString */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = myString; sourceTree = BUILT_PRODUCTS_DIR; };
 		69817EBA2B988BC200E9D350 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		69817EC12B988D6200E9D350 /* myString.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = myString.cpp; sourceTree = "<group>"; };
@@ -31,6 +43,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		694482B62BD91EC400FD5041 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		69817EB42B988BC200E9D350 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -41,10 +60,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		694482BA2BD91EC400FD5041 /* MainTest */ = {
+			isa = PBXGroup;
+			children = (
+				694482BB2BD91EC400FD5041 /* main.cpp */,
+			);
+			path = MainTest;
+			sourceTree = "<group>";
+		};
 		69817EAE2B988BC200E9D350 = {
 			isa = PBXGroup;
 			children = (
 				69817EB92B988BC200E9D350 /* myString */,
+				694482BA2BD91EC400FD5041 /* MainTest */,
 				69817EB82B988BC200E9D350 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				69817EB72B988BC200E9D350 /* myString */,
+				694482B92BD91EC400FD5041 /* MainTest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +99,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		694482B82BD91EC400FD5041 /* MainTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 694482BF2BD91EC400FD5041 /* Build configuration list for PBXNativeTarget "MainTest" */;
+			buildPhases = (
+				694482B52BD91EC400FD5041 /* Sources */,
+				694482B62BD91EC400FD5041 /* Frameworks */,
+				694482B72BD91EC400FD5041 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MainTest;
+			productName = MainTest;
+			productReference = 694482B92BD91EC400FD5041 /* MainTest */;
+			productType = "com.apple.product-type.tool";
+		};
 		69817EB62B988BC200E9D350 /* myString */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 69817EBE2B988BC200E9D350 /* Build configuration list for PBXNativeTarget "myString" */;
@@ -96,6 +142,9 @@
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
+					694482B82BD91EC400FD5041 = {
+						CreatedOnToolsVersion = 15.2;
+					};
 					69817EB62B988BC200E9D350 = {
 						CreatedOnToolsVersion = 15.2;
 					};
@@ -115,11 +164,20 @@
 			projectRoot = "";
 			targets = (
 				69817EB62B988BC200E9D350 /* myString */,
+				694482B82BD91EC400FD5041 /* MainTest */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		694482B52BD91EC400FD5041 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				694482BC2BD91EC400FD5041 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		69817EB32B988BC200E9D350 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -132,6 +190,28 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		694482BD2BD91EC400FD5041 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D3UNM984CW;
+				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		694482BE2BD91EC400FD5041 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D3UNM984CW;
+				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		69817EBC2B988BC200E9D350 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -270,6 +350,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		694482BF2BD91EC400FD5041 /* Build configuration list for PBXNativeTarget "MainTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				694482BD2BD91EC400FD5041 /* Debug */,
+				694482BE2BD91EC400FD5041 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		69817EB22B988BC200E9D350 /* Build configuration list for PBXProject "myString" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
