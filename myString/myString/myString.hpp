@@ -6,22 +6,22 @@ using namespace std;
 
 class myString
 {
-    int length = 0;
-    const int maxSize;
-    char* buffer;
-
 public:
+int length = 0;
+const int maxSize;
+char* buffer;
+
     myString(const int maxSize);
 
     myString(const char* text, const int maxSize);
-    ~myString();
+   
     
-    void append(const char* text1);
-    void appendLine(const char* text2);
+    void Append(const char* text);
+    void AppendLine(const char* text);
     void Replace(char replace, char replacer);
-    void print();
-    char* getString();
+    void Print()const;
+    char* GetString();
     bool operator== (const myString& other) const;
-    int indexOf(const myString& other) const;
-                 
+    int IndexOf(const myString& other) const;
+    ~myString();
    };
