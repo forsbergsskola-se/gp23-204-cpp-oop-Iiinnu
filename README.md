@@ -1,14 +1,20 @@
-Description :
+# String Class
+
+## Description
 This project is a simple C++ program that demonstrates basic string manipulation techniques. It includes the function to append text to a string, replace characters within a string, compare strings, and find substrings. The project also a test to learn important programming concepts such as const correctness and encapsulation and why we use them i c++ to make our life easier. 
 
-Installation
+## Installation
+
 Before you start have this: 
-A C++ compiler (e.g., g++, clang++)
-Google Test framework for testing
-I did this by CLoning Marcs reposotory. 
+- A C++ compiler (e.g., g++, clang++)
+- Google Test framework for testing
+- 
+I did this by CLoning Marc's repository. 
 
 
-Example Output: 
+## Example Output: 
+
+```
 Hi! What is your message?:
 Printing things lol
 
@@ -36,41 +42,48 @@ Bye Bye
 Index: 1
 Index: 7
 Index: -1
+```
 
 
+## Class Details
 
-Class Details
-String Class
+### String Class
+
 The String class provides various string manipulation functions and demonstrates concepts like const correctness and encapsulation.
 
-Constructors:
+### Constructors:
 
-String(int maxSize): Initializes a string with a maximum buffer size.
-String(const char* text, int maxSize): Initializes a string with given text and a maximum buffer size.
-String(const String& other): Copy constructor.
-String(String&& other) noexcept: Move constructor.
-Destructor:
+- `String(int maxSize)`: Initializes a string with a maximum buffer size.
+- `String(const char* text, int maxSize)`: Initializes a string with given text and a maximum buffer size.
+- `String(const String& other)`: Copy constructor.
+- `String(String&& other) noexcept`: Move constructor.
 
-~String(): Deallocates the buffer memory.
+### Destructor:
 
-Member Functions:
+- `~String()`: Deallocates the buffer memory.
 
-void append(const char* text1): Appends text to the string.
-void appendLine(const char* text2): Appends text followed by a newline to the string.
-void Replace(char replace, char replacer): Replaces characters in the string.
-void print(): Prints the string.
-char* getString() const: Returns the string as a C-string.
-int indexOf(const String& other) const: Finds the index of another string.
-Operator Overloads:
+### Member Functions:
 
-<, >, <=, >=, ==, !=, =.
+- `void append(const char* text1)`: Appends text to the string.
+- `void appendLine(const char* text2)`: Appends text followed by a newline to the string.
+- `void Replace(char replace, char replacer)`: Replaces characters in the string.
+- `void print()`: Prints the string.
+- `char* getString() cons`t: Returns the string as a C-string.
+- `int indexOf(const String& other) const`: Finds the index of another string.
 
-Const Correctness
-The project demonstrates const correctness by using const in function signatures to ensure that functions do not modify the state of objects when they are not supposed to. This helps in maintaining the predictability of the code.
 
-Encapsulation
+### Operator Overloads:
+
+`<`, `>`, `<=`, `>=`, `==`, `!=`, `=`.
+
+### Const Correctness
+
+The project demonstrates `const` correctness by using const in function signatures to ensure that functions do not modify the state of objects when they are not supposed to. This helps in maintaining the predictability of the code.
+
+### Encapsulation
+
 The project uses encapsulation by keeping the internal data of the String class private and providing public member functions to manipulate the data. This ensures that the internal state of an object is protected from unintended or harmful modifications.
 
-Testing
-The project includes a set of Google Test cases to verify the functionality of the String class.
+### Testing
+The project includes a set of Google Test cases to verify the functionality of the `String` class.
 
